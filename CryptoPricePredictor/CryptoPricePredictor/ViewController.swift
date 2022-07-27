@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     @IBAction func predictButtonDidTap(_ sender: UIButton) {
         view.endEditing(true)
+        sentimentLabel.text = ""
         guard let key = symbolTextField.text, key != ""
         else {
             return
