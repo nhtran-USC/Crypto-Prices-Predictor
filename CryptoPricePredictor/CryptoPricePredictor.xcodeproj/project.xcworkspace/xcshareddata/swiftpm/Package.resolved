@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "twift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daneden/Twift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2d518d1122a3e010a19a7e39738aba1236ea58e9"
+      }
+    },
+    {
+      "identity" : "twitterapikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mironal/TwitterAPIKit.git",
+      "state" : {
+        "revision" : "586cdfd33c43c305a566a3335c5087d4b903d843",
+        "version" : "0.2.1"
+      }
+    }
+  ],
+  "version" : 2
+}

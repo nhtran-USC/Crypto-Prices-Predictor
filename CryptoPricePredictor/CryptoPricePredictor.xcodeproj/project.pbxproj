@@ -16,6 +16,9 @@
 		2656DD102888B5680066E644 /* CryptoPricePredictorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656DD0F2888B5680066E644 /* CryptoPricePredictorTests.swift */; };
 		2656DD1A2888B5680066E644 /* CryptoPricePredictorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656DD192888B5680066E644 /* CryptoPricePredictorUITests.swift */; };
 		2656DD1C2888B5680066E644 /* CryptoPricePredictorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656DD1B2888B5680066E644 /* CryptoPricePredictorUITestsLaunchTests.swift */; };
+		2656DD2A288907540066E644 /* Twift in Frameworks */ = {isa = PBXBuildFile; productRef = 2656DD29288907540066E644 /* Twift */; };
+		2656DD2D288B4EF30066E644 /* TwitterAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2656DD2C288B4EF30066E644 /* TwitterAPIKit */; };
+		2656DD2F2890BEEE0066E644 /* TextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2656DD2E2890BEEE0066E644 /* TextClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		2656DD152888B5680066E644 /* CryptoPricePredictorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoPricePredictorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2656DD192888B5680066E644 /* CryptoPricePredictorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPricePredictorUITests.swift; sourceTree = "<group>"; };
 		2656DD1B2888B5680066E644 /* CryptoPricePredictorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPricePredictorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2656DD2E2890BEEE0066E644 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = TextClassifier.mlmodel; path = ../../TextClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2656DD2D288B4EF30066E644 /* TwitterAPIKit in Frameworks */,
+				2656DD2A288907540066E644 /* Twift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +105,7 @@
 		2656DCF72888B5660066E644 /* CryptoPricePredictor */ = {
 			isa = PBXGroup;
 			children = (
+				2656DD2E2890BEEE0066E644 /* TextClassifier.mlmodel */,
 				2656DCF82888B5660066E644 /* AppDelegate.swift */,
 				2656DCFA2888B5660066E644 /* SceneDelegate.swift */,
 				2656DCFC2888B5660066E644 /* ViewController.swift */,
@@ -143,6 +150,10 @@
 			dependencies = (
 			);
 			name = CryptoPricePredictor;
+			packageProductDependencies = (
+				2656DD29288907540066E644 /* Twift */,
+				2656DD2C288B4EF30066E644 /* TwitterAPIKit */,
+			);
 			productName = CryptoPricePredictor;
 			productReference = 2656DCF52888B5660066E644 /* CryptoPricePredictor.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,10 @@
 				Base,
 			);
 			mainGroup = 2656DCEC2888B5660066E644;
+			packageReferences = (
+				2656DD28288907540066E644 /* XCRemoteSwiftPackageReference "Twift" */,
+				2656DD2B288B4EF30066E644 /* XCRemoteSwiftPackageReference "TwitterAPIKit" */,
+			);
 			productRefGroup = 2656DCF62888B5660066E644 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2656DD2F2890BEEE0066E644 /* TextClassifier.mlmodel in Sources */,
 				2656DCFD2888B5660066E644 /* ViewController.swift in Sources */,
 				2656DCF92888B5660066E644 /* AppDelegate.swift in Sources */,
 				2656DCFB2888B5660066E644 /* SceneDelegate.swift in Sources */,
@@ -602,6 +618,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2656DD28288907540066E644 /* XCRemoteSwiftPackageReference "Twift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daneden/Twift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		2656DD2B288B4EF30066E644 /* XCRemoteSwiftPackageReference "TwitterAPIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mironal/TwitterAPIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2656DD29288907540066E644 /* Twift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2656DD28288907540066E644 /* XCRemoteSwiftPackageReference "Twift" */;
+			productName = Twift;
+		};
+		2656DD2C288B4EF30066E644 /* TwitterAPIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2656DD2B288B4EF30066E644 /* XCRemoteSwiftPackageReference "TwitterAPIKit" */;
+			productName = TwitterAPIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2656DCED2888B5660066E644 /* Project object */;
 }
