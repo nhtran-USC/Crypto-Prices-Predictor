@@ -12,17 +12,24 @@ import CoreML
 
 class ViewController: UIViewController {
 
+    // should not do this fix later
+//    var beaverToken:String?
+//
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         predictButton.layer.cornerRadius = predictButton.frame.height / 2
         authTwitterUser()
         
-//        async {
-//            await testExample()
-//        }
-        
+//        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        if let lastSearchTerm = defaults.object(forKey: "lastSearchTerm") as? String {
+            symbolTextField.text = lastSearchTerm
+        }
     }
+    
+    
     @IBOutlet weak var predictButton: UIButton!
     @IBOutlet weak var sentimentLabel: UILabel!
     @IBOutlet weak var symbolTextField: UITextField!
@@ -38,6 +45,8 @@ class ViewController: UIViewController {
         else {
             return
         }
+        // saving into userDefault
+        defaults.set(key, forKey: "lastSearchTerm")
         
         // start fecting
         async {

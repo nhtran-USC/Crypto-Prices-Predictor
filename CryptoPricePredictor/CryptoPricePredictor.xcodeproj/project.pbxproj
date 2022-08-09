@@ -19,6 +19,7 @@
 		2656DD2A288907540066E644 /* Twift in Frameworks */ = {isa = PBXBuildFile; productRef = 2656DD29288907540066E644 /* Twift */; };
 		2656DD2D288B4EF30066E644 /* TwitterAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2656DD2C288B4EF30066E644 /* TwitterAPIKit */; };
 		2656DD2F2890BEEE0066E644 /* TextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2656DD2E2890BEEE0066E644 /* TextClassifier.mlmodel */; };
+		2656DDD82894876F0066E644 /* token.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2656DDD72894876F0066E644 /* token.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2656DD192888B5680066E644 /* CryptoPricePredictorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPricePredictorUITests.swift; sourceTree = "<group>"; };
 		2656DD1B2888B5680066E644 /* CryptoPricePredictorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPricePredictorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2656DD2E2890BEEE0066E644 /* TextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = TextClassifier.mlmodel; path = ../../TextClassifier.mlmodel; sourceTree = "<group>"; };
+		2656DDD72894876F0066E644 /* token.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = token.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				2656DD2E2890BEEE0066E644 /* TextClassifier.mlmodel */,
 				2656DCF82888B5660066E644 /* AppDelegate.swift */,
+				2656DDD72894876F0066E644 /* token.plist */,
 				2656DCFA2888B5660066E644 /* SceneDelegate.swift */,
 				2656DCFC2888B5660066E644 /* ViewController.swift */,
 				2656DCFE2888B5660066E644 /* Main.storyboard */,
@@ -248,6 +251,7 @@
 			files = (
 				2656DD052888B5680066E644 /* LaunchScreen.storyboard in Resources */,
 				2656DD022888B5680066E644 /* Assets.xcassets in Resources */,
+				2656DDD82894876F0066E644 /* token.plist in Resources */,
 				2656DD002888B5660066E644 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
